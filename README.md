@@ -1,7 +1,12 @@
-# Example of Potential ESLint Bug
+# Example of Potential ESLint Options Bug
 
-Using the [Airbnb](https://www.npmjs.com/package/eslint-config-airbnb) ESLint
-config and adding the option to relax the `whitespace-after-return`, the
+**Options**
+
+  - `newline-before-return`
+  - `padded-blocks`
+
+Using the [Airbnb ESLint config](https://www.npmjs.com/package/eslint-config-airbnb)
+and adding the option to relax the `whitespace-after-return`, the
 `padded-blocks` errror still reports.
 
 The code being lint-ed:
