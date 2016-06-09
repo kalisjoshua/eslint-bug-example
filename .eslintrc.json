@@ -1,0 +1,6 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "newline-before-return": 0
+  }
+}
