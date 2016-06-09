@@ -1,13 +1,7 @@
 # Example of Potential ESLint Options Bug
 
-**Options**
-
-  - `newline-before-return`
-  - `padded-blocks`
-
-Using the [Airbnb ESLint config](https://www.npmjs.com/package/eslint-config-airbnb)
-and adding the option to relax the `whitespace-after-return`, the
-`padded-blocks` errror still reports.
+The "new" option `newline-before-return` is not preventing errors from being
+reported for `padded-blocks`.
 
 The code being lint-ed:
 
@@ -22,9 +16,9 @@ The eslint config:
 
 ```json
 {
-  "extends": "airbnb",
   "rules": {
-    "newline-before-return": 0
+    "newline-before-return": "off",
+    "padded-blocks": "error"
   }
 }
 ```
@@ -39,7 +33,7 @@ $ npm test
 
 
 ~/eslint-bug-example/index.js
-  1:18  error  Block must not be padded by blank lines  padded-blocks
+  4:1  error  Block must not be padded by blank lines  padded-blocks
 
   ✖ 1 problem (1 error, 0 warnings)
 
